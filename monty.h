@@ -52,6 +52,7 @@ void checkArgs(int argc);
 void checkFile(FILE *fileopen, char **argv);
 
 void op_pint(stack_t **stack, unsigned int line_number);
+void op_pop(stack_t **stack, unsigned int line_number);
 
 extern instruction_t op_codes[];
 #endif

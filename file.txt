@@ -3,4 +3,5 @@ push 78
 push 78
 push 800
 pint
+pop
 pall

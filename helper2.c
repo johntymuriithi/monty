@@ -79,4 +79,29 @@ void free_dlistint(stack_t *head)
 	}
 }
 
+/**
+ * op_pop - Remove the top element of the stack.
+ * @stack: Double pointer to the top of the stack.
+ * @line_number: Line number in Monty script (unused).
+ * 
+ * Return: no return
+ */
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *popNode;
 
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	popNode = *stack;
+	*stack = (*stack)->next;
+	if (*stack != NULL)
+	{
+		(*stack)->prev = NULL;
+	}
+
+	free(popNode);
+}

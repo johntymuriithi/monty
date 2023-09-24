@@ -7,8 +7,8 @@
  */
 void op_nop(stack_t **stack, unsigned int line_number)
 {
-    (void)stack;
-    (void)line_number;
+	(void)stack;
+	(void)line_number;
 }
 
 /**
@@ -21,6 +21,11 @@ void op_add(stack_t **stack, unsigned int line_number)
 	int num1, num2, sum;
 	stack_t *new_node;
 
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't add empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	num1 = (*stack)->n;
 	num2 = (*stack)->next->n;
 	sum = num1 + num2;

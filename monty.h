@@ -59,5 +59,6 @@ void op_nop(stack_t **stack, unsigned int line_number);
 
 void op_sub(stack_t **stack, unsigned int line_number);
 void op_div(stack_t **stack, unsigned int line_number);
+void op_mul(stack_t **stack, unsigned int line_number);
 extern instruction_t op_codes[];
 #endif

@@ -10,7 +10,7 @@
  */
 void op_swap(stack_t **stack, unsigned int line_number)
 {
-	int swa, num;
+	int swa, num = 0;
 	stack_t *current = *stack;
 
 	while (current != NULL)

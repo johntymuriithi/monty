@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 		{"add", op_add},
 		{"nop", op_nop},
 		{"sub", op_sub},
+		{"div", op_div},
 		{NULL, NULL}};
 
 	checkArgs(argc);

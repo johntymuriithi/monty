@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 		{"pint", op_pint},
 		{"pop", op_pop},
 		{"swap", op_swap},
+		{"add", op_add},
 		{NULL, NULL}};
 
 	checkArgs(argc);

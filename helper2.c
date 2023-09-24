@@ -13,6 +13,11 @@ void op_swap(stack_t **stack, unsigned int line_number)
 	int swa, num = 0;
 	stack_t *current = *stack;
 
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't add empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	while (current != NULL)
 	{
 		num++;

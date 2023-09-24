@@ -2,6 +2,28 @@
 
 
 /**
+ * op_swap - swap the top element of the stack.
+ * @stack: Double pointer to the top of the stack.
+ * @line_number: Line number in Monty script (unused).
+ *
+ * Return: no return
+ */
+void op_swap(stack_t **stack, unsigned int line_number)
+{
+	int swa;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	swa = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = swa;
+}
+
+/**
  * op_pint - Print the value at the top of the stack.
  * @stack: Double pointer to the top of the stack.
  * @line_number: Line number in Monty script (unused).

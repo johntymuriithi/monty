@@ -1,7 +1,4 @@
 push 3
-push 78
-push 78
-push 800
+push 40
+swap
 pint
-pop
-pall

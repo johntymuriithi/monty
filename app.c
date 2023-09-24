@@ -18,13 +18,14 @@ int main(int argc, char **argv)
 	char *buffer = NULL, *cmd;
 	size_t buffsize = 0;
 	stack_t *MStack = NULL;
-	int line_num = 1, i, flag = 0;
+	int line_num = 1, i, flag;
 
 	checkArgs(argc);
 	fileopen = fopen(argv[1], "r");
 	checkFile(fileopen, argv);
 	while (getline(&buffer, &buffsize, fileopen) != -1)
 	{
+		flag = 0;
 		errno = 0;
 		cmd = strtok(buffer, " \n");
 		for (i = 0; op_codes[i].opcode != NULL; i++)

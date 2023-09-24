@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 		{"swap", op_swap},
 		{"add", op_add},
 		{"nop", op_nop},
+		{"sub", op_sub},
 		{NULL, NULL}};
 
 	checkArgs(argc);

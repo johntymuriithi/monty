@@ -1,6 +1,17 @@
 #include "monty.h"
 
 /**
+ * op_nop - No operation (does nothing).
+ * @stack: Double pointer to the top of the stack.
+ * @line_number: Line number in Monty script (unused).
+ */
+void op_nop(stack_t **stack, unsigned int line_number)
+{
+    (void)stack;
+    (void)line_number;
+}
+
+/**
  * op_add - Add the top two elements of the stack.
  * @stack: Double pointer to the top of the stack.
  * @line_number: Line number in Monty script.

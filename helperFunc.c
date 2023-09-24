@@ -4,7 +4,7 @@
  * checkFile - function to push data
  * @fileopen: file opened
  * @argv: arguments
- * 
+ *
  * Return: no return
  */
 void checkFile(FILE *fileopen, char **argv)
@@ -19,7 +19,7 @@ void checkFile(FILE *fileopen, char **argv)
 /**
  * checkArgs - function to check the number of arguments passed
  * @argc: number of the values
- * 
+ *
  * Return: no return
  */
 void checkArgs(int argc)
@@ -36,7 +36,7 @@ void checkArgs(int argc)
  * @fileopen: file itself
  * @buffer: buffer passed
  * @MStack: stack of the data
- * 
+ *
  * Return: no return
  */
 void myFunc(FILE *fileopen, char *buffer, stack_t *MStack)
@@ -55,7 +55,7 @@ void myFunc(FILE *fileopen, char *buffer, stack_t *MStack)
  * op_pall - function to print data
  * @stack: stack of the values
  * @line_number: line number
- * 
+ *
  * Return: no return
  */
 void op_pall(stack_t **stack, unsigned int line_number)
@@ -76,25 +76,26 @@ void op_pall(stack_t **stack, unsigned int line_number)
 /**
  * isNum - check if a string is number
  * @str: string to check
- * 
+ *
  * Return: return 1 or 0
  */
 int isNum(char *str)
 {
-
-	if (str == NULL || *str == '\0') {
+	if (str == NULL || *str == '\0')
+	{
 		return (0);
 	}
-
-
-	if (*str == '+' || *str == '-') {
-		str++; 
+	if (*str == '+' || *str == '-')
+	{
+		str++;
 	}
 
 
-	while (*str != '\0') {
+	while (*str != '\0')
+	{
 
-		if (!isdigit(*str)) {
+		if (!isdigit(*str))
+		{
 			return (0);
 		}
 		str++;

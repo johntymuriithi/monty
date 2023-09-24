@@ -1,3 +1,6 @@
 push 3
-p
-pall 4
+push 78
+push 78
+push 800
+pint
+pall

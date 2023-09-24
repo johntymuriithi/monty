@@ -1,10 +1,4 @@
 #include "monty.h"
-
-instruction_t op_codes[] = {
-	{"push", op_push},
-	{"pall", op_pall},
-	{NULL, NULL}
-};
 /**
  * main - Entry Point for the program
  * @argc: number of arguments
@@ -19,6 +13,11 @@ int main(int argc, char **argv)
 	size_t buffsize = 0;
 	stack_t *MStack = NULL;
 	int line_num = 1, i, flag;
+	instruction_t op_codes[] = {
+		{"push", op_push},
+		{"pall", op_pall},
+		{"pint", op_pint},
+		{NULL, NULL}};
 
 	checkArgs(argc);
 	fileopen = fopen(argv[1], "r");
